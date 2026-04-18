@@ -49,7 +49,7 @@ export default function Services() {
                 <p className="text-stone-400 text-sm mb-6 leading-relaxed">{service.description}</p>
                 <div className="mt-auto space-y-4">
                   <div className="flex justify-between text-white font-bold border-b border-stone-800 pb-4">
-                    <span className="text-xs text-stone-500 uppercase tracking-widest flex items-center gap-2"><Clock size={12}/> {service.duration}</span>
+                    <span className="text-xs text-stone-500 uppercase tracking-widest flex items-center gap-2"><Clock size={12} /> {service.duration}</span>
                     <span>{service.price}</span>
                   </div>
                   <a href="https://www.instagram.com/haircare_ua/" target="_blank" rel="noreferrer" className="block w-full text-center py-4 bg-[#D4AF37] text-stone-950 text-xs font-bold uppercase tracking-widest rounded-lg">Записатись</a>
