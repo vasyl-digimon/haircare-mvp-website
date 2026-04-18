@@ -82,12 +82,18 @@ export default function Services() {
                 )}
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="font-serif text-2xl text-white mb-3 tracking-wide">{service.title}</h3>
-                <p className="text-stone-400 text-sm mb-6 leading-relaxed h-12 overflow-hidden line-clamp-2 italic">
+                {/* Виправлений заголовок з фіксованою мін-висотою */}
+                <h3 className="font-serif text-2xl text-white mb-3 tracking-wide min-h-[4rem] flex items-center">
+                  {service.title}
+                </h3>
+                
+                {/* Виправлений опис з фіксованою мін-висотою */}
+                <p className="text-stone-400 text-sm mb-6 leading-relaxed min-h-[3rem] line-clamp-2 italic">
                   {service.description}
                 </p>
                 
-                <ul className="space-y-2 mb-6">
+                {/* Список фішок з фіксованою мін-висотою */}
+                <ul className="space-y-2 mb-6 min-h-[3rem]">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-[11px] text-stone-300 uppercase tracking-wider">
                       <CheckCircle size={12} className="text-[#D4AF37]" /> {feature}
