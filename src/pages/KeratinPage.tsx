@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'; // Додаємо цей імпорт для SEO
+import { Link } from 'react-router-dom';
 import Contact from '../components/Contact';
 import { CheckCircle, AlertCircle } from 'lucide-react';
 

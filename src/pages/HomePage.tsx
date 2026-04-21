@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       <Helmet>
         <title>Вирівнювання та відновлення волосся Львів | Haircare UA</title>
-        <meta name="description" content="Професійне випрямлення волосся у Львові: кератин, ботокс, нанопластика. Зробимо ваше волосся ідеально рівним та блискучим. Записуйтесь!" />
+        <meta name="description" content="Професійне випрямлення волосся у Львові: кератин, ботокс, нанопластика. Зробимо ваше волосся ідеально рівним та блискучим." />
         <link rel="canonical" href="https://www.haircareua.com.ua/" />
       </Helmet>
       
