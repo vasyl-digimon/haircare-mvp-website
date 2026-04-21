@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Вирівнювання та відновлення волосся Львів | Haircare UA</title>
+        <title>Вирівнювання та відновлення волосся Львів | Студія HaircareUA</title>
         <meta name="description" content="Професійне випрямлення волосся у Львові: кератин, ботокс, нанопластика. Зробимо ваше волосся ідеально рівним та блискучим." />
         <link rel="canonical" href="https://www.haircareua.com.ua/" />
       </Helmet>
