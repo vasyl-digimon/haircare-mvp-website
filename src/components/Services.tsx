@@ -1,4 +1,5 @@
 import { Clock, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Імпортуємо Link
 
 const services = [
   {
@@ -82,17 +83,14 @@ export default function Services() {
                 )}
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                {/* Виправлений заголовок з фіксованою мін-висотою */}
                 <h3 className="font-serif text-2xl text-white mb-3 tracking-wide min-h-[4rem] flex items-center">
                   {service.title}
                 </h3>
                 
-                {/* Виправлений опис з фіксованою мін-висотою */}
                 <p className="text-stone-400 text-sm mb-6 leading-relaxed min-h-[3rem] line-clamp-2 italic">
                   {service.description}
                 </p>
                 
-                {/* Список фішок з фіксованою мін-висотою */}
                 <ul className="space-y-2 mb-6 min-h-[3rem]">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-[11px] text-stone-300 uppercase tracking-wider">
@@ -112,10 +110,17 @@ export default function Services() {
                     href="https://www.instagram.com/haircare_ua/" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="block w-full text-center py-4 bg-[#D4AF37] text-stone-950 text-xs font-bold uppercase tracking-[0.2em] rounded-lg hover:bg-white transition-all duration-300 shadow-md"
+                    className="block w-full text-center py-4 bg-[#D4AF37] text-stone-950 text-xs font-bold uppercase tracking-[0.2em] rounded-lg hover:bg-white transition-all duration-300 shadow-md mb-2"
                   >
                     Записатись
                   </a>
+                  {/* ПЕРЕЛІНКОВКА ТУТ */}
+                  <Link 
+                    to={service.slug}
+                    className="block w-full text-center text-stone-500 text-[10px] uppercase tracking-widest hover:text-[#D4AF37] transition-all"
+                  >
+                    Детальніше про послугу
+                  </Link>
                 </div>
               </div>
             </div>
