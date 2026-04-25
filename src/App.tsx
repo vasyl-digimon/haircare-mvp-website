@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import KeratinPage from './pages/KeratinPage';
+import BotoxPage from './pages/BotoxPage';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {

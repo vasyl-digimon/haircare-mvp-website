@@ -24,7 +24,7 @@ export default function Header() {
   // 2. Оновлюємо шляхи в меню: тепер вони ведуть на конкретні URL
   const navLinks = [
     { name: 'Кератин', href: '/keratynove-vyrivnyuvannya-lviv' },
-    { name: 'Ботокс', href: '#services' }, // Поки залишаємо скрол, поки не створимо сторінку ботоксу
+    { name: 'Ботокс', href: '/botoks-volossya-lviv' }, // Поки залишаємо скрол, поки не створимо сторінку ботоксу
     { name: 'Нанопластика', href: '#services' },
     { name: 'Контакти', href: '#contact' },
   ];
