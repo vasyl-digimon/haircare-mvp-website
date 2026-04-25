@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
+import TrustBar from '../components/TrustBar'; // 1. Додаємо імпорт
 import About from '../components/About';
 import Process from '../components/Process';
 import Services from '../components/Services';
@@ -11,12 +12,13 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Вирівнювання та відновлення волосся Львів | Студія HaircareUA</title>
-        <meta name="description" content="Професійне випрямлення волосся у Львові: кератин, ботокс, нанопластика. Зробимо ваше волосся ідеально рівним та блискучим." />
+        <title>Вирівнювання та відновлення волосся Львів | Студія Haircare UA</title>
+        <meta name="description" content="Професійна студія випрямлення волосся у Львові. Кератин, ботокс, нанопластика. Понад 500 задоволених клієнток. Записуйтесь!" />
         <link rel="canonical" href="https://www.haircareua.com.ua/" />
       </Helmet>
       
       <Hero />
+      <TrustBar /> {/* 2. Вставляємо тут */}
       <About />
       <Process />
       <Services />
