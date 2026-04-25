@@ -5,7 +5,7 @@ export default function Hero() {
         <img
           src="/hero.jpg" 
           className="w-full h-full object-cover object-[70%_center] md:object-center opacity-60"
-          alt="Кератинове вирівнювання волосся Львів" 
+          alt="Професійне вирівнювання волосся Львів" 
         />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
@@ -16,20 +16,21 @@ export default function Hero() {
           <div className="flex items-center gap-3">
             <div className="h-px w-8 md:w-12 bg-[#D4AF37]" />
             <span className="text-[#D4AF37] text-[10px] md:text-xs font-semibold tracking-[0.3em] uppercase">
-              Професійний догляд у Львові
+              Студія краси волосся Haircare UA
             </span>
           </div>
 
+          {/* Новий SEO H1 для Головної */}
           <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] md:leading-tight break-words h-auto">
-            Кератинове <br />
+            Професійне <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F9E498] inline-block">
-              вирівнювання
+              вирівнювання та відновлення
             </span> <br />
-            волосся Львів
+            волосся у Львові
           </h1>
 
-          <p className="text-stone-300 text-base md:text-xl leading-relaxed max-w-md md:max-w-xl text-balance">
-            Відновлення структури, дзеркальний блиск та ідеальна гладкість. Поверніть своєму волоссю силу та здоров'я.
+          <p className="text-stone-300 text-base md:text-xl leading-relaxed max-w-md md:max-w-xl text-balance italic">
+            Допомагаємо підібрати ідеальну процедуру для вашого типу волосся — кератин, ботокс або нанопластика. Працюємо на результат.
           </p>
 
           <div className="pt-4 flex flex-wrap gap-4">
