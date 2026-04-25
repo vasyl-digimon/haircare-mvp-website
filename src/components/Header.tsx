@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Instagram } from 'lucide-react';
-// 1. Додаємо імпорт Link для переходу між сторінками
 import { Link } from 'react-router-dom';
 
 export default function Header() {
@@ -21,10 +20,9 @@ export default function Header() {
     }
   }, [isMobileMenuOpen]);
 
-  // 2. Оновлюємо шляхи в меню: тепер вони ведуть на конкретні URL
   const navLinks = [
     { name: 'Кератин', href: '/keratynove-vyrivnyuvannya-lviv' },
-    { name: 'Ботокс', href: '/botoks-volossya-lviv' }, // Поки залишаємо скрол, поки не створимо сторінку ботоксу
+    { name: 'Ботокс', href: '/botoks-volossya-lviv' },
     { name: 'Нанопластика', href: '#services' },
     { name: 'Контакти', href: '#contact' },
   ];
@@ -37,7 +35,6 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          {/* Logo - тепер це Link на головну "/" */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 border border-[#D4AF37] flex items-center justify-center rotate-45 group-hover:rotate-0 transition-all duration-500">
               <span className="text-[#D4AF37] -rotate-45 group-hover:rotate-0 transition-all font-serif text-xl font-bold">H</span>
@@ -47,10 +44,8 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              /* 3. Перевіряємо: якщо посилання внутрішнє (починається з /), використовуємо Link */
               link.href.startsWith('/') ? (
                 <Link 
                   key={link.name} 
@@ -60,7 +55,6 @@ export default function Header() {
                   {link.name}
                 </Link>
               ) : (
-                /* Якщо це якір (#contact), залишаємо звичайний <a> */
                 <a 
                   key={link.name} 
                   href={link.href} 
@@ -83,6 +77,7 @@ export default function Header() {
           <button 
             className="md:hidden text-white p-2" 
             onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open Menu"
           >
             <Menu size={28} />
           </button>
@@ -96,8 +91,9 @@ export default function Header() {
         }`}
       >
         <button 
-          className="absolute top-8 right-8 text-white p-2" 
+          className="absolute top-8 right-8 text-white p-2 hover:text-[#D4AF37] transition-colors" 
           onClick={() => setIsMobileMenuOpen(false)}
+          aria-label="Close Menu"
         >
           <X size={32} />
         </button>
@@ -131,7 +127,8 @@ export default function Header() {
             href="https://www.instagram.com/haircare_ua/" 
             target="_blank" 
             rel="noreferrer" 
-            className="flex items-center gap-3 px-8 py-4 border border-[#D4AF37] rounded-full text-[#D4AF37]"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="flex items-center gap-3 px-8 py-4 border border-[#D4AF37] rounded-full text-[#D4AF37] hover:bg-[#D4AF37] hover:text-stone-950 transition-all duration-300"
           >
             <Instagram size={22} />
             <span className="text-sm font-bold uppercase tracking-[0.2em] italic">@haircare_ua</span>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import TrustBar from '../components/TrustBar';
@@ -13,7 +12,7 @@ export default function HomePage() {
     <>
       <Helmet>
         <title>Кератин, ботокс та нанопластика волосся у Львові | Haircare UA</title>
-        <meta name="description" content="Професійне кератинове вирівнювання, ботокс та нанопластика волосся у Львові. Індивідуальний підбір процедури, сертифіковані склади та дзеркальний блиск." />
+        <meta name="description" content="Професійне кератинове вирівнювання, ботокс та нанопластика волосся у Львові. Індивідуальний підбір процедури та дзеркальний блиск." />
         <link rel="canonical" href="https://www.haircareua.com.ua/" />
       </Helmet>
       
