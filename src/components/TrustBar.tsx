@@ -1,22 +1,30 @@
-// Додайте цей компонент у src/components/TrustBar.tsx
-import { User } from 'lucide-react';
-
 export default function TrustBar() {
+  // Список реальних жіночих облич (Unsplash IDs)
+  const avatars = [
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
+  ];
+
   return (
-    <div className="flex items-center gap-4 py-6 px-4 bg-stone-900/20 border-y border-stone-800/50 justify-center">
+    <div className="flex items-center gap-4 py-8 px-4 bg-stone-900/40 border-y border-stone-800/50 justify-center">
       <div className="flex -space-x-3">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="w-8 h-8 rounded-full border-2 border-stone-950 bg-stone-800 flex items-center justify-center overflow-hidden">
-             <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="avatar" />
+        {avatars.map((url, i) => (
+          <div key={i} className="w-10 h-10 rounded-full border-2 border-stone-950 bg-stone-800 flex items-center justify-center overflow-hidden">
+             <img src={url} alt="Клієнтка Haircare UA" className="w-full h-full object-cover" />
           </div>
         ))}
       </div>
-      <div className="text-stone-400 text-xs sm:text-sm">
-        <span className="text-white font-bold">500+</span> щасливих клієнток у Львові
-      </div>
-      <div className="h-4 w-px bg-stone-800 mx-2 hidden sm:block"></div>
-      <div className="hidden sm:flex items-center gap-1 text-[#D4AF37]">
-        <span className="text-sm font-bold tracking-widest">@haircare_ua</span>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+        <div className="text-stone-300 text-xs sm:text-sm font-medium">
+          <span className="text-white font-bold">500+</span> щасливих дівчат у Львові
+        </div>
+        <div className="hidden sm:block h-4 w-px bg-stone-800"></div>
+        <div className="text-[#D4AF37] text-[10px] sm:text-xs font-bold tracking-widest uppercase italic">
+          Довіряють майстру
+        </div>
       </div>
     </div>
   );
