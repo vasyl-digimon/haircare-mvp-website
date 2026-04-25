@@ -18,6 +18,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/keratynove-vyrivnyuvannya-lviv" element={<KeratinPage />} />
+              <Route path="/botoks-volossya-lviv" element={<BotoxPage />} />
             </Routes>
           </main>
           <Footer />
