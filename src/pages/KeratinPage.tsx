@@ -1,6 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async'; // Додаємо цей імпорт для SEO
 import { Link } from 'react-router-dom';
+import Reviews from '../components/Reviews';
 import Contact from '../components/Contact';
 import { CheckCircle, AlertCircle } from 'lucide-react';
 
@@ -142,6 +142,7 @@ export default function KeratinPage() {
                         </p>
                     </div>
                 </section>
+                <Reviews />
                 <Contact />
             </div>
         </>

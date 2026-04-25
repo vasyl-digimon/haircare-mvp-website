@@ -2,9 +2,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Contact from '../components/Contact';
 import { 
-  CheckCircle, ShieldCheck, Clock, 
-  Instagram, Star, Info, ArrowRight,
-  Flame, Snowflake, HelpCircle
+  ShieldCheck, 
+  Clock, 
+  Star, 
+  Flame, 
+  Snowflake, 
+  HelpCircle 
 } from 'lucide-react';
 
 export default function BotoxPage() {

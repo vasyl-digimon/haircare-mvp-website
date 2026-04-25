@@ -4,6 +4,7 @@ import TrustBar from '../components/TrustBar';
 import About from '../components/About';
 import Process from '../components/Process';
 import Services from '../components/Services';
+import Reviews from '../components/Reviews';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 
@@ -21,6 +22,7 @@ export default function HomePage() {
       <About />
       <Process />
       <Services />
+      <Reviews />
       <FAQ />
       <Contact />
     </>
