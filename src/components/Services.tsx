@@ -1,5 +1,5 @@
 import { Clock, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom'; // Імпортуємо Link
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -114,7 +114,6 @@ export default function Services() {
                   >
                     Записатись
                   </a>
-                  {/* ПЕРЕЛІНКОВКА ТУТ */}
                   <Link 
                     to={service.slug}
                     className="block w-full text-center text-stone-500 text-[10px] uppercase tracking-widest hover:text-[#D4AF37] transition-all"
