@@ -29,10 +29,9 @@ export default function Header() {
 
   return (
     <>
-      <header 
-        className={`fixed w-full z-[80] transition-all duration-500 ${
-          isScrolled ? 'bg-stone-950/95 backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'
-        }`}
+      <header
+        className={`fixed w-full z-[80] transition-all duration-500 ${isScrolled ? 'bg-stone-950/95 backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2 group">
@@ -47,36 +46,50 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               link.href.startsWith('/') ? (
-                <Link 
-                  key={link.name} 
-                  to={link.href} 
+                <Link
+                  key={link.name}
+                  to={link.href}
                   className="text-stone-300 hover:text-[#D4AF37] text-xs font-semibold tracking-[0.2em] uppercase transition-colors"
                 >
                   {link.name}
                 </Link>
               ) : (
-                <a 
-                  key={link.name} 
-                  href={link.href} 
+                <a
+                  key={link.name}
+                  href={link.href}
                   className="text-stone-300 hover:text-[#D4AF37] text-xs font-semibold tracking-[0.2em] uppercase transition-colors"
                 >
                   {link.name}
                 </a>
               )
             ))}
-            <a 
-              href="https://www.instagram.com/haircare_ua/" 
-              target="_blank" 
-              rel="noreferrer" 
+            <a
+              href="https://www.instagram.com/haircare_ua/"
+              target="_blank"
+              rel="noreferrer"
               aria-label="Наш Instagram"
               className="text-[#D4AF37] hover:text-white transition-colors p-2 border border-[#D4AF37]/30 rounded-full hover:border-[#D4AF37]"
             >
-              <Instagram size={18} />
+              {/* Замість компонента ставимо чистий SVG */}
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
             </a>
           </nav>
 
-          <button 
-            className="md:hidden text-white p-2" 
+          <button
+            className="md:hidden text-white p-2"
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Open Menu"
           >
@@ -86,13 +99,12 @@ export default function Header() {
       </header>
 
       {/* Mobile Menu */}
-      <div 
-        className={`fixed inset-0 bg-stone-950 z-[100] flex flex-col items-center justify-center transition-all duration-500 md:hidden ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible translate-y-[-20px]'
-        }`}
+      <div
+        className={`fixed inset-0 bg-stone-950 z-[100] flex flex-col items-center justify-center transition-all duration-500 md:hidden ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible translate-y-[-20px]'
+          }`}
       >
-        <button 
-          className="absolute top-8 right-8 text-white p-2 hover:text-[#D4AF37] transition-colors" 
+        <button
+          className="absolute top-8 right-8 text-white p-2 hover:text-[#D4AF37] transition-colors"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-label="Close Menu"
         >
@@ -102,19 +114,19 @@ export default function Header() {
         <nav className="flex flex-col items-center gap-8 w-full px-10">
           {navLinks.map((link) => (
             link.href.startsWith('/') ? (
-              <Link 
-                key={link.name} 
-                to={link.href} 
-                onClick={() => setIsMobileMenuOpen(false)} 
+              <Link
+                key={link.name}
+                to={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-2xl font-serif text-white hover:text-[#D4AF37] uppercase tracking-[0.2em] transition-all"
               >
                 {link.name}
               </Link>
             ) : (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                onClick={() => setIsMobileMenuOpen(false)} 
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-2xl font-serif text-white hover:text-[#D4AF37] uppercase tracking-[0.2em] transition-all"
               >
                 {link.name}
@@ -123,11 +135,11 @@ export default function Header() {
           ))}
 
           <div className="w-full h-px bg-stone-800 my-4 max-w-[150px]"></div>
-          
-          <a 
-            href="https://www.instagram.com/haircare_ua/" 
-            target="_blank" 
-            rel="noreferrer" 
+
+          <a
+            href="https://www.instagram.com/haircare_ua/"
+            target="_blank"
+            rel="noreferrer"
             onClick={() => setIsMobileMenuOpen(false)}
             className="flex items-center gap-3 px-8 py-4 border border-[#D4AF37] rounded-full text-[#D4AF37] hover:bg-[#D4AF37] hover:text-stone-950 transition-all duration-300"
           >
