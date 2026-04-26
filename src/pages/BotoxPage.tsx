@@ -4,7 +4,6 @@ import Contact from '../components/Contact';
 import { 
   ThermometerSnowflake, 
   Flame, 
-  ShieldCheck, 
   HelpCircle, 
   CheckCircle, 
   ArrowRight 
@@ -16,37 +15,9 @@ export default function BotoxPage() {
   return (
     <>
       <Helmet>
-        <title>Ботокс для волосся Львів: ціна, гаряче та холодне відновлення | Haircare UA</title>
-        <meta name="description" content="Професійне відновлення волосся ботоксом у Львові. Приборкуємо пухнастість, повертаємо еластичність та здоровий блиск без втрати об'єму. Записуйтесь!" />
+        <title>Ботокс для волосся Львів: Ціна, Відгуки, Фото | Haircare UA</title>
+        <meta name="description" content="Професійний ботокс для волосся у Львові (центр). Гаряча та холодна техніки відновлення. Дзеркальний блиск без втрати об'єму. Дивіться результати та записуйтесь!" />
         <link rel="canonical" href={pageUrl} />
-
-        {/* JSON-LD Service Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "Service",
-            "serviceType": "Ботокс для волосся",
-            "provider": {
-              "@type": "BeautySalon",
-              "name": "Haircare UA",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "вул. Костюшка, 18",
-                "addressLocality": "Львів",
-                "addressCountry": "UA"
-              }
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Львів"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "UAH",
-              "price": "800"
-            }
-          })}
-        </script>
       </Helmet>
 
       <div className="pt-20 bg-stone-950 text-white selection:bg-[#D4AF37] selection:text-black">
@@ -64,67 +35,80 @@ export default function BotoxPage() {
           
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
             <div className="max-w-3xl">
-              <nav className="flex gap-2 text-stone-500 text-[10px] uppercase tracking-widest mb-8 font-bold text-balance">
+              <nav className="flex gap-2 text-stone-500 text-[10px] uppercase tracking-widest mb-8 font-bold">
                 <Link to="/" className="hover:text-[#D4AF37] transition-colors">Головна</Link>
                 <span>/</span>
-                <span className="text-[#D4AF37]">Ботокс</span>
+                <span className="text-[#D4AF37]">Ботокс для волосся</span>
               </nav>
               <h1 className="font-serif text-4xl md:text-7xl font-bold leading-tight mb-6 text-balance uppercase tracking-tight">
-                Ботокс для волосся: <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F9E498]">дзеркальний блиск</span>
+                Ботокс для волосся <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F9E498]">у Львові</span>
               </h1>
               <p className="text-stone-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
-                Інтенсивне живлення та колагенове відновлення у Львові. 
-                Приборкуємо пухнастість, повертаємо еластичність та здоровий вигляд за один візит.
+                Глибоке живлення та колагенове відновлення. Приборкуємо пухнастість та повертаємо здоровий блиск без втрати природного об'єму.
               </p>
-              <a 
-                href="https://www.instagram.com/haircare_ua/" 
-                target="_blank" 
-                rel="noreferrer"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase text-xs tracking-widest rounded-full hover:bg-white transition-all shadow-2xl"
-              >
-                Записатись на діагностику <ArrowRight size={16} />
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href="https://www.instagram.com/haircare_ua/" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-3 px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase text-xs tracking-widest rounded-full hover:bg-white transition-all shadow-2xl"
+                >
+                  Записатись на діагностику <ArrowRight size={16} />
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
         {/* 2. THE CHOICE: HOT VS COLD */}
         <section className="py-24 bg-stone-900/20 border-b border-stone-900">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="font-serif text-3xl md:text-4xl text-center mb-16 tracking-tight">Дві техніки — <span className="text-[#D4AF37]">різні цілі</span></h2>
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <h2 className="font-serif text-3xl md:text-4xl mb-16 tracking-tight">Дві техніки — <span className="text-[#D4AF37]">різні цілі</span></h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-stone-950 p-10 rounded-[40px] border border-stone-800 hover:border-blue-900/30 transition-all group">
-                <ThermometerSnowflake className="text-blue-400 mb-6 group-hover:scale-110 transition-transform" size={40} />
+              <div className="bg-stone-950 p-10 rounded-[40px] border border-stone-800 hover:border-blue-900/30 transition-all group text-left">
+                <div className="flex justify-between items-start mb-6">
+                  <ThermometerSnowflake className="text-blue-400 group-hover:scale-110 transition-transform" size={40} />
+                  <span className="text-[10px] text-stone-600 uppercase tracking-widest border border-stone-800 px-3 py-1 rounded-full">Лікування</span>
+                </div>
                 <h3 className="text-white font-serif text-2xl mb-4">Холодне відновлення</h3>
                 <p className="text-stone-400 text-sm leading-relaxed">
-                  Працює виключно на внутрішню структуру без використання праски. 
-                  Це справжня «терапія» для вкрай пошкодженого, ламкого волосся та блонду, що втратив силу.
+                  SOS-терапія без використання праски. Працює на внутрішньому рівні волосся. Ідеально для реанімації блонду та вкрай пошкоджених пасом.
                 </p>
               </div>
-              <div className="bg-stone-950 p-10 rounded-[40px] border border-stone-800 hover:border-orange-900/30 transition-all group">
-                <Flame className="text-orange-500 mb-6 group-hover:scale-110 transition-transform" size={40} />
+              <div className="bg-stone-950 p-10 rounded-[40px] border border-stone-800 hover:border-orange-900/30 transition-all group text-left">
+                <div className="flex justify-between items-start mb-6">
+                  <Flame className="text-orange-500 group-hover:scale-110 transition-transform" size={40} />
+                  <span className="text-[10px] text-stone-600 uppercase tracking-widest border border-stone-800 px-3 py-1 rounded-full">Візуал</span>
+                </div>
                 <h3 className="text-white font-serif text-2xl mb-4">Гарячий ботокс</h3>
                 <p className="text-stone-400 text-sm leading-relaxed">
-                  Поєднує глибоке живлення з візуальним ефектом. Склад герметизується під дією температури, 
-                  створюючи захисну оболонку, неймовірний глянець та легке розчісування.
+                  Поєднує живлення з миттєвим естетичним ефектом. Прибирає "ялинку", додає дзеркальний глянець та полегшує укладку.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 3. IDEAL CANDIDATES & VALUE PROP */}
+        {/* 3. DIAGNOSTICS - PROOF OF EXPERTISE */}
         <section className="py-24 bg-stone-950">
           <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative group p-4 bg-white/5 rounded-[40px] border border-stone-800">
+               <img src="/rev2.avif" className="w-full h-auto rounded-[32px] shadow-2xl" alt="Відгук ботокс волосся" />
+            </div>
             <div className="space-y-8">
-              <h2 className="font-serif text-3xl md:text-5xl tracking-tight">Дисципліна <br/><span className="text-[#D4AF37]">без радикальних змін</span></h2>
+              <h2 className="font-serif text-3xl md:text-5xl tracking-tight uppercase">Чому обирають <br/><span className="text-[#D4AF37]">Haircare UA?</span></h2>
               <div className="h-1 w-20 bg-[#D4AF37]" />
               <p className="text-stone-300 leading-relaxed text-lg">
-                На відміну від кератину, ботокс не руйнує дисульфідні зв’язки. Він робить природні кучері структурованими та важкими, не випрямляючи їх у "палки".
+                Я не просто наношу склад. Кожна процедура починається з <strong>тесту на еластичність</strong>. Це дозволяє мені підібрати безпечну температуру та склад, щоб не пошкодити ваше волосся.
               </p>
               <div className="grid gap-4">
-                {['Освітлений блонд', 'Надмірна пухнастість', 'Сухість та посічені кінчики', 'Тонке волосся без блиску'].map((item) => (
+                {[
+                  'Індивідуальний підбір техніки під тип волосся',
+                  'Преміум-склади без їдкого запаху та диму',
+                  'Збереження природного об\'єму',
+                  'Професійна консультація по домашньому догляду'
+                ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-stone-400 text-sm">
                     <CheckCircle size={18} className="text-[#D4AF37] shrink-0" />
                     <span>{item}</span>
@@ -132,19 +116,15 @@ export default function BotoxPage() {
                 ))}
               </div>
             </div>
-            <div className="relative group p-4 bg-white/5 rounded-[40px] border border-stone-800">
-               <img src="/rev2.avif" className="w-full h-auto rounded-[32px] shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" alt="Ботокс волосся догляд" />
-            </div>
           </div>
         </section>
 
-        {/* 4. SAFETY & PRICE TABLE */}
+        {/* 4. PRICE TABLE */}
         <section className="py-24 bg-stone-900/20 border-y border-stone-900">
           <div className="max-w-4xl mx-auto px-6">
             <div className="text-center mb-16">
-               <ShieldCheck className="text-[#D4AF37] mx-auto mb-6" size={48} />
                <h2 className="font-serif text-3xl md:text-5xl mb-6 tracking-tight uppercase">Вартість у Львові</h2>
-               <p className="text-stone-400 text-sm italic">Ми працюємо з низькотемпературними режимами та складами, багатими на олії та протеїни.</p>
+               <p className="text-stone-500 text-[10px] uppercase tracking-[0.3em]">Студія в центрі міста</p>
             </div>
             
             <div className="overflow-hidden rounded-3xl border border-stone-800 bg-stone-950 shadow-2xl">
@@ -154,36 +134,35 @@ export default function BotoxPage() {
                   <span className="text-[#D4AF37] font-bold">від 800 грн</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-800 pb-6 text-lg">
-                  <span className="text-stone-300">Гарячий ботокс (коротка)</span>
+                  <span className="text-stone-300">Ботокс (коротке волосся)</span>
                   <span className="text-[#D4AF37] font-bold">від 1500 грн</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-800 pb-6 text-lg">
-                  <span className="text-stone-300">Гарячий ботокс (середня)</span>
+                  <span className="text-stone-300">Ботокс (середня довжина)</span>
                   <span className="text-[#D4AF37] font-bold">від 1800 грн</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-800 pb-6 text-lg">
-                  <span className="text-stone-300">Гарячий ботокс (довге)</span>
+                  <span className="text-stone-300">Ботокс (довге волосся)</span>
                   <span className="text-[#D4AF37] font-bold">від 2200 грн</span>
                 </div>
               </div>
             </div>
-            <p className="text-center text-stone-500 text-[10px] mt-6 uppercase tracking-widest">* Остаточна ціна після тесту на еластичність</p>
           </div>
         </section>
 
-        {/* 5. FAQ SECTION */}
+        {/* 5. EXPERT FAQ */}
         <section className="py-24 bg-stone-950">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="font-serif text-3xl text-center mb-16 uppercase tracking-[0.2em] text-[#D4AF37]">Експертний FAQ</h2>
+            <h2 className="font-serif text-3xl text-center mb-16 uppercase tracking-[0.2em] text-[#D4AF37]">FAQ</h2>
             <div className="space-y-6">
               {[
-                { q: "Чи стане волосся жирним швидше?", a: "Ні. Склад наноситься з відступом від коренів. Я допоможу підібрати правильний шампунь, щоб очищення було ефективним." },
-                { q: "Чи можна робити ботокс після фарбування?", a: "Рекомендую почекати 10-14 днів. Ботокс може трохи 'виштовхнути' свіжий пігмент через дію компонентів." },
-                { q: "Чим ботокс кращий за кератин?", a: "Він не кращий, він інший. Кератин — про випрямлення. Ботокс — про наповнення та якість без втрати об'єму." },
-                { q: "Чи обов'язково сушити волосся феном?", a: "Так. Ботокс термоактивний. Тепле повітря розправляє захисну плівку і створює той самий глянець." }
+                { q: "Чи стане волосся жирним швидше?", a: "Ні. Склад наноситься з відступом 1-2 см від коренів. Я допоможу підібрати правильний шампунь для вашого типу шкіри голови." },
+                { q: "Скільки триває сеанс?", a: "Залежно від густоти — від 1.5 до 2.5 годин. Ми працюємо на якість, а не на швидкість." },
+                { q: "Чи можна робити ботокс на блонд?", a: "Це найкраща процедура для блондинок. Вона наповнює порожню структуру волосини та зупиняє ламкість." },
+                { q: "Чи обов'язково сушити волосся феном?", a: "Так. Компоненти ботоксу термоактивні. Тільки під дією теплого повітря ви отримаєте той самий дзеркальний блиск." }
               ].map((faq, i) => (
                 <div key={i} className="group p-8 border border-stone-800 rounded-3xl bg-stone-900/10 hover:border-[#D4AF37]/30 transition-all">
-                  <h4 className="flex items-center gap-3 text-white font-bold mb-4 text-balance">
+                  <h4 className="flex items-center gap-3 text-white font-bold mb-4">
                     <HelpCircle size={20} className="text-[#D4AF37]" /> {faq.q}
                   </h4>
                   <p className="text-stone-400 text-sm leading-relaxed">{faq.a}</p>
@@ -195,7 +174,7 @@ export default function BotoxPage() {
 
         {/* 6. INTERNAL LINKING */}
         <section className="py-20 border-t border-stone-900 bg-stone-950 text-center">
-           <p className="text-stone-500 text-sm mb-4 italic">Мрієте про ідеальну гладкість без кучерів?</p>
+           <p className="text-stone-500 text-sm mb-4">Бажаєте максимального випрямлення?</p>
            <Link to="/keratynove-vyrivnyuvannya-lviv" className="text-[#D4AF37] hover:text-white transition-colors underline underline-offset-8 decoration-stone-800 font-bold uppercase text-xs tracking-widest">
              Кератинове вирівнювання волосся у Львові
            </Link>
