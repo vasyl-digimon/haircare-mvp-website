@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="uk">
-
 <head>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYSKT1SQ1N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KYSKT1SQ1N');
   </script>
@@ -15,24 +14,18 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Preload головного зображення для LCP (тільки для головної) -->
+  <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
+
   <!-- Швидке підключення шрифтів -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Покращення LCP для сервісних сторінок -->
-  <link rel="preload" as="image" href="/hero.jpg" fetchPriority="high">
-  <link rel="preload" as="image" href="/keratynove-vypryamlennya-volossya.avif" fetchPriority="high">
-  <link rel="preload" as="image" href="/botoks-volossya.avif" fetchPriority="high">
-  <link rel="preload" as="image" href="/nanoplastyka-volossya.avif" fetchPriority="high">
-
-  <!-- Запасний заголовок (буде замінений на Helmet автоматично) -->
   <title>Haircare UA — Студія вирівнювання волосся у Львові</title>
 </head>
-
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
-
 </html>

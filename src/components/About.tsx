@@ -37,7 +37,9 @@ export default function About() {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/60 border border-stone-800/50">
               <img
-                src="/iryna-master-studio.avif" 
+                src="/iryna-master-studio.avif"
+                width="450"
+                height="600" 
                 alt="Процес професійного догляду за волоссям"
                 className="w-full h-[520px] object-cover object-center"
               />

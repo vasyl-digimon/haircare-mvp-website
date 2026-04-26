@@ -45,7 +45,7 @@ export default function Reviews() {
               </div>
               
               <div className="mt-4 flex justify-center">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-stone-500 font-bold">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-stone-300 font-bold">
                   {rev.label}
                 </span>
               </div>
