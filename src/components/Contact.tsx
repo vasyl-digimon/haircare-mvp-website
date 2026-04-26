@@ -37,7 +37,7 @@ export default function Contact() {
             </div>
 
             <div className="mt-12 pt-8 border-t border-stone-800">
-              <p className="text-stone-500 uppercase tracking-widest text-[10px] mb-2 font-bold">Робочі години</p>
+              <p className="text-stone-400 uppercase tracking-widest text-[10px] mb-2 font-bold">Робочі години</p>
               <p className="text-white text-2xl font-serif italic">За індивідуальним записом</p>
             </div>
           </div>

@@ -84,7 +84,7 @@ export default function About() {
                 Вже понад 6 років я допомагаю жінкам відчути впевненість у собі завдяки
                 здоровому, блискучому та гладкому волоссю.
               </p>
-              <p className="text-stone-400 text-base leading-relaxed italic">
+              <p className="text-stone-300 text-base leading-relaxed italic">
                 Я закохана в свою справу і постійно вдосконалюю навички, проходячи навчання
                 у провідних майстрів. Мій підхід — не просто послуга, а справжній
                 ритуал краси та турботи про себе.
@@ -103,7 +103,7 @@ export default function About() {
                   </div>
                   <div>
                     <p className="text-white text-sm font-semibold mb-1">{item.title}</p>
-                    <p className="text-stone-400 text-xs leading-relaxed">{item.desc}</p>
+                    <p className="text-stone-300 text-xs leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}

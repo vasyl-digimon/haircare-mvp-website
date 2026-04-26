@@ -25,10 +25,10 @@ const services = [
   {
     title: 'Біопластика',
     slug: '/bioplastyka-volossya-lviv',
-    description: 'Органічне випрямлення без формальдегіду. Безпечно для вагітних.',
+    description: 'Органічне випрямлення без формальдегіду. Безпечно для здоров’я.',
     duration: '2–3 год',
     price: 'від 1800 грн',
-    features: ['Без формальдегіду', 'Можна вагітним'],
+    features: ['Без формальдегіду', 'М’який склад'],
     image: '/bioplastika-volossya.avif',
     highlight: false,
   },
@@ -64,7 +64,7 @@ export default function Services() {
             <span className="text-[#D4AF37] text-xs font-semibold tracking-[0.3em] uppercase">Прайс та послуги</span>
             <div className="h-px w-10 bg-[#D4AF37]" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4 italic">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4 italic text-balance">
             Мої <span className="text-[#D4AF37]">процедури</span>
           </h2>
         </div>
@@ -87,13 +87,15 @@ export default function Services() {
                   {service.title}
                 </h3>
                 
-                <p className="text-stone-400 text-sm mb-6 leading-relaxed min-h-[3rem] line-clamp-2 italic">
+                {/* Піднято контраст тексту: stone-400 -> stone-200 */}
+                <p className="text-stone-200 text-sm mb-6 leading-relaxed min-h-[3rem] line-clamp-2 italic font-medium">
                   {service.description}
                 </p>
                 
+                {/* Піднято контраст списку: stone-300 -> stone-200 */}
                 <ul className="space-y-2 mb-6 min-h-[3rem]">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-[11px] text-stone-300 uppercase tracking-wider">
+                    <li key={feature} className="flex items-center gap-2 text-[11px] text-stone-200 uppercase tracking-wider font-semibold">
                       <CheckCircle size={12} className="text-[#D4AF37]" /> {feature}
                     </li>
                   ))}
@@ -101,7 +103,8 @@ export default function Services() {
 
                 <div className="mt-auto space-y-4">
                   <div className="flex justify-between items-center text-white font-bold border-b border-stone-800 pb-4">
-                    <span className="text-[10px] text-stone-500 uppercase tracking-[0.2em] flex items-center gap-2">
+                    {/* Піднято контраст іконок: stone-500 -> stone-400 */}
+                    <span className="text-[10px] text-stone-400 uppercase tracking-[0.2em] flex items-center gap-2 font-bold">
                       <Clock size={12} /> {service.duration}
                     </span>
                     <span className="text-[#D4AF37] tracking-tighter">{service.price}</span>
@@ -114,9 +117,10 @@ export default function Services() {
                   >
                     Записатись
                   </a>
+                  {/* Піднято контраст посилання: stone-500 -> stone-400 */}
                   <Link 
                     to={service.slug}
-                    className="block w-full text-center text-stone-500 text-[10px] uppercase tracking-widest hover:text-[#D4AF37] transition-all"
+                    className="block w-full text-center text-stone-400 text-[10px] uppercase tracking-widest hover:text-[#D4AF37] transition-all font-bold"
                   >
                     Детальніше про послугу
                   </Link>

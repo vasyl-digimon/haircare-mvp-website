@@ -18,7 +18,7 @@ export default function TrustBar() {
         ))}
       </div>
       <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-        <div className="text-stone-300 text-xs sm:text-sm font-medium">
+        <div className="text-stone-200 text-xs sm:text-sm font-medium">
           <span className="text-white font-bold">500+</span> щасливих дівчат у Львові
         </div>
         <div className="hidden sm:block h-4 w-px bg-stone-800"></div>

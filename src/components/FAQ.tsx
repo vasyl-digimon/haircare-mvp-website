@@ -37,7 +37,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="text-white font-medium pr-4">{item.q}</span>
-                {openIndex === index ? <ChevronUp className="text-[#D4AF37]" /> : <ChevronDown className="text-stone-400" />}
+                {openIndex === index ? <ChevronUp className="text-[#D4AF37]" /> : <ChevronDown className="text-stone-300" />}
               </button>
               {openIndex === index && (
                 <div className="p-6 bg-stone-900/20 text-stone-300 text-sm leading-relaxed border-t border-stone-800">
