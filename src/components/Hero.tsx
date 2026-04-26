@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-stone-950">
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero.jpg"
+          src="/hero.avif"
           fetchPriority="high"
           loading="eager"
           decoding="async"

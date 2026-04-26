@@ -39,8 +39,8 @@ export default function About() {
               <img
                 src="/iryna-master-studio.avif"
                 loading="lazy"
-                width="450"
-                height="600" 
+                width="400"
+                height="533" 
                 alt="Процес професійного догляду за волоссям"
                 className="w-full h-[520px] object-cover object-center"
               />

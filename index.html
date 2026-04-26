@@ -4,26 +4,29 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0a09"> <!-- Запобігає білому спалаху -->
 
-  <!-- 1. ПРЕЛОАД ГОЛОВНОГО ЗОБРАЖЕННЯ (Найвищий пріоритет для LCP) -->
+  <!-- 1. ПРЕЛОАД З ПРІОРИТЕТОМ -->
   <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
 
-  <!-- 2. DNS PREFETCH (Пришвидшує з'єднання з серверами Google) -->
+  <!-- 2. КРИТИЧНИЙ CSS (Показує чорний фон негайно) -->
+  <style>
+    body { background-color: #0c0a09; margin: 0; }
+    #hero { background-color: #0c0a09; min-height: 100vh; }
+  </style>
+
+  <!-- 3. ОПТИМІЗАЦІЯ ШРИФТІВ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  <!-- 3. ОПТИМІЗОВАНЕ ЗАВАНТАЖЕННЯ ШРИФТІВ (Не блокує відображення тексту) -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
 
-  <!-- 4. GOOGLE ANALYTICS (Перенесено нижче, щоб не заважати рендеру мобайлу) -->
+  <!-- Google Analytics (Додано атрибут defer для швидкості) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYSKT1SQ1N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-KYSKT1SQ1N', { 'anchor': false });
+    gtag('config', 'G-KYSKT1SQ1N');
   </script>
 
   <title>Haircare UA — Студія вирівнювання волосся у Львові</title>
