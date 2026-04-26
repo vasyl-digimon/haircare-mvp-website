@@ -4,6 +4,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/hero.avif"
+          width="1200"
+          height="800"
           fetchPriority="high"
           loading="eager"
           decoding="async"
