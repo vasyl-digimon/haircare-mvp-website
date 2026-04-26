@@ -15,7 +15,7 @@ export default function Reviews() {
             <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 italic">
               Що кажуть <span className="text-[#D4AF37]">клієнтки</span>
             </h2>
-            <p className="text-stone-400 leading-relaxed">
+            <p className="text-stone-300 leading-relaxed">
               Найкраща оцінка моєї роботи — це ваші повідомлення та впевненість, яку ви отримуєте разом із новим виглядом вашого волосся.
             </p>
           </div>
@@ -33,19 +33,21 @@ export default function Reviews() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviewsList.map((rev, i) => (
             <div key={i} className="group relative">
-              {/* Декоративна кавичка */}
               <Quote className="absolute -top-4 -left-4 text-[#D4AF37]/20 w-12 h-12" />
               
               <div className="overflow-hidden rounded-2xl border border-stone-800 bg-stone-900/50 p-2 transition-all duration-500 group-hover:border-[#D4AF37]/50 group-hover:shadow-[0_0_30px_rgba(212,175,55,0.1)]">
                 <img 
                   src={rev.img} 
                   alt="Відгук клієнтки Haircare UA" 
+                  loading="lazy" // Оптимізація швидкості
+                  width="400"    // Запобігання стрибкам верстки
+                  height="500"   // Запобігання стрибкам верстки
                   className="w-full h-auto rounded-xl grayscale-[30%] group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
               
               <div className="mt-4 flex justify-center">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-stone-300 font-bold">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-stone-200 font-bold">
                   {rev.label}
                 </span>
               </div>

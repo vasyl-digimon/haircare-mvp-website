@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="uk">
 <head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 1. ПРІОРИТЕТНИЙ ПРЕЛОАД КАРТИНКИ (Саме цей рядок дасть найбільший приріст) -->
+  <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
+
+  <!-- 2. ОПТИМІЗАЦІЯ ШРИФТІВ (Прибираємо блокування рендеру) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYSKT1SQ1N"></script>
   <script>
@@ -9,18 +21,6 @@
     gtag('js', new Date());
     gtag('config', 'G-KYSKT1SQ1N');
   </script>
-
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Preload головного зображення для LCP (тільки для головної) -->
-  <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
-
-  <!-- Швидке підключення шрифтів -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <title>Haircare UA — Студія вирівнювання волосся у Львові</title>
 </head>

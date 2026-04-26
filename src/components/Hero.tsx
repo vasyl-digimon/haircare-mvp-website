@@ -3,7 +3,9 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-stone-950">
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero.jpg" 
+          src="/hero.jpg"
+          fetchPriority="high" 
+          loading="eager"
           className="w-full h-full object-cover object-[70%_center] md:object-center opacity-60"
           alt="Професійне вирівнювання волосся Львів" 
         />

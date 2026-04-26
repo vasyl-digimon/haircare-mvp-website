@@ -76,6 +76,9 @@ export default function Services() {
                 <img 
                   src={service.image} 
                   alt={service.title} 
+                  loading="lazy" // Оптимізація швидкості
+                  width="400"    // Фіксація розміру для Google
+                  height="300"   // Фіксація розміру для Google
                   className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
                 />
                 {service.highlight && (
@@ -87,12 +90,10 @@ export default function Services() {
                   {service.title}
                 </h3>
                 
-                {/* Піднято контраст тексту: stone-400 -> stone-200 */}
                 <p className="text-stone-200 text-sm mb-6 leading-relaxed min-h-[3rem] line-clamp-2 italic font-medium">
                   {service.description}
                 </p>
                 
-                {/* Піднято контраст списку: stone-300 -> stone-200 */}
                 <ul className="space-y-2 mb-6 min-h-[3rem]">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-[11px] text-stone-200 uppercase tracking-wider font-semibold">
@@ -103,7 +104,6 @@ export default function Services() {
 
                 <div className="mt-auto space-y-4">
                   <div className="flex justify-between items-center text-white font-bold border-b border-stone-800 pb-4">
-                    {/* Піднято контраст іконок: stone-500 -> stone-400 */}
                     <span className="text-[10px] text-stone-400 uppercase tracking-[0.2em] flex items-center gap-2 font-bold">
                       <Clock size={12} /> {service.duration}
                     </span>
@@ -117,7 +117,6 @@ export default function Services() {
                   >
                     Записатись
                   </a>
-                  {/* Піднято контраст посилання: stone-500 -> stone-400 */}
                   <Link 
                     to={service.slug}
                     className="block w-full text-center text-stone-400 text-[10px] uppercase tracking-widest hover:text-[#D4AF37] transition-all font-bold"
