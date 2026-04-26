@@ -61,6 +61,7 @@ export default function KeratinPage() {
                     <div className="absolute inset-0 z-0">
                         <img
                             src="/keratynove-vypryamlennya-volossya.avif"
+                            fetchPriority="high"
                             className="w-full h-full object-cover opacity-30 object-center"
                             alt="Кератинове вирівнювання волосся Львів результат"
                         />

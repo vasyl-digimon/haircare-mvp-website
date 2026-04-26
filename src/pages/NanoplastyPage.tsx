@@ -56,7 +56,7 @@ export default function NanoplastyPage() {
         {/* 1. HERO SECTION */}
         <section className="relative min-h-[60vh] flex items-center border-b border-stone-900 overflow-hidden text-left">
           <div className="absolute inset-0 z-0">
-            <img src="/nanoplastyka-volossya.avif" className="w-full h-full object-cover opacity-30 object-center" alt="Нанопластика волосся Львів результат" />
+            <img src="/nanoplastyka-volossya.avif" className="w-full h-full object-cover opacity-30 object-center" alt="Нанопластика волосся Львів результат" fetchPriority="high"/>
             <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/70 to-transparent" />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">

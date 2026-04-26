@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYSKT1SQ1N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KYSKT1SQ1N');
   </script>
@@ -13,13 +13,14 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Preload основного шрифту або Hero зображення головної для швидкості LCP -->
-  <link rel="preload" as="image" href="/hero.jpg">
 
-  <!-- Тут ми залишаємо тільки базовий заголовок. 
-       Все інше (SEO, OG, Canonical) буде додавати Helmet динамічно для кожної сторінки -->
-  <title>Haircare UA — Студія вирівнювання волосся</title>
+  <!-- Швидке підключення шрифтів -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Запасний заголовок (буде замінений на Helmet автоматично) -->
+  <title>Haircare UA — Студія вирівнювання волосся у Львові</title>
 </head>
 <body>
   <div id="root"></div>

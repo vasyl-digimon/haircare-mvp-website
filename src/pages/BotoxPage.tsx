@@ -2,11 +2,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import WorkAlgorithm from '../components/WorkAlgorithm';
 import Contact from '../components/Contact';
-import { 
-  ThermometerSnowflake, 
-  Flame, 
-  HelpCircle, 
-  CheckCircle, 
+import {
+  ThermometerSnowflake,
+  Flame,
+  HelpCircle,
+  CheckCircle,
   ArrowRight,
   Camera,
   Instagram
@@ -21,7 +21,7 @@ export default function BotoxPage() {
         <title>Ботокс для волосся Львів: Ціна, Відгуки, Фото | Haircare UA</title>
         <meta name="description" content="Професійне відновлення волосся ботоксом у Львові. Гаряча та холодна техніки. Дзеркальний блиск без втрати об'єму. Отримайте ціну за фото в Direct!" />
         <link rel="canonical" href={pageUrl} />
-        
+
         {/* Rich Schema для Послуги */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -55,7 +55,7 @@ export default function BotoxPage() {
         {/* 1. HERO SECTION */}
         <section className="relative min-h-[65vh] flex items-center border-b border-stone-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src="/botoks-volossya.avif" className="w-full h-full object-cover opacity-30 object-center" alt="Ботокс для волосся Львів результат" />
+            <img src="/botoks-volossya.avif" className="w-full h-full object-cover opacity-30 object-center" alt="Ботокс для волосся Львів результат" fetchPriority="high"/>
             <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/75 to-transparent" />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-left">
