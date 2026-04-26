@@ -68,6 +68,7 @@ export default function Header() {
               href="https://www.instagram.com/haircare_ua/" 
               target="_blank" 
               rel="noreferrer" 
+              aria-label="Наш Instagram"
               className="text-[#D4AF37] hover:text-white transition-colors p-2 border border-[#D4AF37]/30 rounded-full hover:border-[#D4AF37]"
             >
               <Instagram size={18} />

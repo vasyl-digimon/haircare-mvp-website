@@ -5,21 +5,25 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- 1. ПРІОРИТЕТНИЙ ПРЕЛОАД КАРТИНКИ (Саме цей рядок дасть найбільший приріст) -->
+  <!-- 1. ПРЕЛОАД ГОЛОВНОГО ЗОБРАЖЕННЯ (Найвищий пріоритет для LCP) -->
   <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
 
-  <!-- 2. ОПТИМІЗАЦІЯ ШРИФТІВ (Прибираємо блокування рендеру) -->
+  <!-- 2. DNS PREFETCH (Пришвидшує з'єднання з серверами Google) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- 3. ОПТИМІЗОВАНЕ ЗАВАНТАЖЕННЯ ШРИФТІВ (Не блокує відображення тексту) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
 
-  <!-- Google Analytics -->
+  <!-- 4. GOOGLE ANALYTICS (Перенесено нижче, щоб не заважати рендеру мобайлу) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYSKT1SQ1N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-KYSKT1SQ1N');
+    gtag('config', 'G-KYSKT1SQ1N', { 'anchor': false });
   </script>
 
   <title>Haircare UA — Студія вирівнювання волосся у Львові</title>

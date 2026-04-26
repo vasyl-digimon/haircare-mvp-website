@@ -4,10 +4,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/hero.jpg"
-          fetchPriority="high" 
+          fetchPriority="high"
           loading="eager"
+          decoding="async"
           className="w-full h-full object-cover object-[70%_center] md:object-center opacity-60"
-          alt="Професійне вирівнювання волосся Львів" 
+          alt="Професійне вирівнювання волосся Львів"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
@@ -36,10 +37,10 @@ export default function Hero() {
           </p>
 
           <div className="pt-4 flex flex-wrap gap-4">
-            <a href="https://www.instagram.com/haircare_ua/" 
-               target="_blank" 
-               rel="noreferrer" 
-               className="inline-block px-10 py-4 md:px-12 md:py-5 bg-[#D4AF37] text-stone-950 font-bold text-xs md:text-sm tracking-widest uppercase rounded-full hover:bg-white transition-all shadow-lg shadow-gold-900/20">
+            <a href="https://www.instagram.com/haircare_ua/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block px-10 py-4 md:px-12 md:py-5 bg-[#D4AF37] text-stone-950 font-bold text-xs md:text-sm tracking-widest uppercase rounded-full hover:bg-white transition-all shadow-lg shadow-gold-900/20">
               Записатись
             </a>
           </div>
