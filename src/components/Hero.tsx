@@ -8,7 +8,7 @@ export default function Hero() {
           height="800"
           fetchPriority="high"
           loading="eager"
-          decoding="async"
+          decoding="sync" // Змінив з async на sync для головної картинки, щоб вона з'явилася миттєво
           className="w-full h-full object-cover object-[70%_center] md:object-center opacity-60"
           alt="Професійне вирівнювання волосся Львів"
         />
