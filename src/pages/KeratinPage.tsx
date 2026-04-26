@@ -12,25 +12,37 @@ import {
     HelpCircle,
     Wind,
     Thermometer,
-    Instagram
+    Instagram,
+    FlaskConical, // Для наукового підходу
+    HandHeart,    // Для догляду
+    AlertTriangle // Для блоку безпеки
 } from 'lucide-react';
 
 export default function KeratinPage() {
     const pageUrl = "https://www.haircareua.com.ua/keratynove-vyrivnyuvannya-lviv";
+    
+    // FAQ Data для Schema.org та рендерингу
+    const faqData = [
+        { q: "Чи відпаде волосся, коли кератин вимиється?", a: "Ні. Це міф. Ламкість виникає лише при порушенні технології або невірно підібраній температурі. Я провожу тест на еластичність перед кожною процедурою." },
+        { q: "Чи можна робити кератин на блонд?", a: "Так, якщо волосся має достатній ступінь міцності. Для дуже пошкодженого блонду я рекомендую спочатку «холодне відновлення»." },
+        { q: "Чи правда, що не можна мити голову 3 дні?", a: "Ні, це застарілий стандарт. У моїй студії ми змиваємо склад відразу — ви бачите кінцевий результат ще в кріслі." },
+        { q: "Який шампунь потрібен після кератину?", a: "Обов'язково безсульфатний або професійний м'який шампунь. Це допоможе зберегти полімерну плівку до 6 місяців." }
+    ];
 
     return (
         <>
             <Helmet>
-                <title>Кератинове вирівнювання волосся Львів: ціна, відгуки | Haircare UA</title>
-                <meta name="description" content="Ідеальна гладкість до 6 місяців у Львові. Професійне кератинове випрямлення волосся будь-якої складності. Забудьте про праску — записуйтесь онлайн!" />
+                <title>Кератинове вирівнювання волосся Львів | Ціна та Догляд 2025</title>
+                <meta name="description" content="Професійне кератування волосся у Львові. 100% вирівнювання навіть афро-кучерів. Безпечна техніка, результат до 6 місяців. Дізнайтесь ціну та запишіться!" />
                 <link rel="canonical" href={pageUrl} />
 
-                {/* JSON-LD Service Schema */}
+                {/* РОЗШИРЕНА СХЕМА (Service + FAQ) */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",
                         "@type": "Service",
                         "serviceType": "Кератинове вирівнювання волосся",
+                        "description": "Процедура довготривалого випрямлення та відновлення структури волосся.",
                         "provider": {
                             "@type": "BeautySalon",
                             "name": "Haircare UA",
@@ -41,230 +53,179 @@ export default function KeratinPage() {
                                 "addressCountry": "UA"
                             }
                         },
-                        "areaServed": {
-                            "@type": "City",
-                            "name": "Львів"
-                        },
-                        "offers": {
-                            "@type": "Offer",
-                            "priceCurrency": "UAH",
-                            "price": "1800"
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Послуги випрямлення",
+                            "itemListElement": [
+                                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Кератин на коротке волосся" }, "price": "1800", "priceCurrency": "UAH" }
+                            ]
                         }
+                    })}
+                </script>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": faqData.map(item => ({
+                            "@type": "Question",
+                            "name": item.q,
+                            "acceptedAnswer": { "@type": "Answer", "text": item.a }
+                        }))
                     })}
                 </script>
             </Helmet>
 
-            <div className="pt-20 bg-stone-950 text-white selection:bg-[#D4AF37] selection:text-black font-sans">
+            <div className="pt-20 bg-stone-950 text-white font-sans selection:bg-[#D4AF37] selection:text-black">
 
-                {/* 1. HERO SECTION */}
-                <section className="relative min-h-[65vh] flex items-center border-b border-stone-900 overflow-hidden">
+                {/* 1. HERO (Залишаємо, він ідеальний) */}
+                <section className="relative min-h-[70vh] flex items-center border-b border-stone-900 overflow-hidden">
                     <div className="absolute inset-0 z-0">
-                        <img
-                            src="/keratynove-vypryamlennya-volossya.avif"
-                            fetchPriority="high"
-                            className="w-full h-full object-cover opacity-30 object-center"
-                            alt="Кератинове вирівнювання волосся Львів результат"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/75 to-transparent" />
+                        <img src="/keratynove-vypryamlennya-volossya.avif" className="w-full h-full object-cover opacity-30 object-center" alt="Кератин Львів" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/80 to-transparent" />
                     </div>
-
                     <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
-                        <div className="max-w-3xl">
-                            <nav className="flex gap-2 text-stone-500 text-[10px] uppercase tracking-widest mb-8 font-bold">
-                                <Link to="/" className="hover:text-[#D4AF37] transition-colors">Головна</Link>
-                                <span>/</span>
-                                <span className="text-[#D4AF37]">Кератинове вирівнювання</span>
-                            </nav>
-                            <h1 className="font-serif text-4xl md:text-7xl font-bold leading-tight mb-6 text-balance uppercase tracking-tight">
-                                Кератинове вирівнювання <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F9E498]">волосся у Львові</span>
-                            </h1>
-                            <p className="text-stone-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl italic">
-                                Ідеальна гладкість до 6 місяців. Забудьте про щоденну праску та пухнастість під час дощу. Результат відразу після процедури.
-                            </p>
-                            <a
-                                href="https://www.instagram.com/haircare_ua/"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center gap-3 px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase text-xs tracking-widest rounded-full hover:bg-white transition-all shadow-2xl"
-                            >
-                                Записатись на консультацію <ArrowRight size={16} />
-                            </a>
-                        </div>
+                        <nav className="flex gap-2 text-stone-500 text-[10px] uppercase tracking-[0.2em] mb-8 font-bold">
+                            <Link to="/" className="hover:text-[#D4AF37]">Головна</Link>
+                            <span>/</span>
+                            <span className="text-[#D4AF37]">Кератинове вирівнювання</span>
+                        </nav>
+                        <h1 className="font-serif text-4xl md:text-7xl font-bold leading-tight mb-6 uppercase tracking-tight">
+                            Кератинове <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F9E498]">вирівнювання Львів</span>
+                        </h1>
+                        <p className="text-stone-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl italic">
+                            Професійне випрямлення волосся будь-якої складності. 100% гладкість, дзеркальний блиск та захист від вологи.
+                        </p>
+                        <a href="https://www.instagram.com/haircare_ua/" className="inline-flex items-center gap-3 px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase text-xs tracking-widest rounded-full hover:scale-105 transition-all">
+                            Записатись <ArrowRight size={16} />
+                        </a>
                     </div>
                 </section>
 
-                {/* 2. TRUST BAR */}
-                <section className="py-12 bg-stone-900/30 border-b border-stone-900">
+                {/* 2. SEMANTIC CONTENT: ЩО ТАКЕ КЕРАТИН? (НОВИЙ БЛОК) */}
+                <section className="py-24 bg-stone-950 border-b border-stone-900">
                     <div className="max-w-6xl mx-auto px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div className="flex items-center gap-4 justify-center md:justify-start">
-                                <Sparkles className="text-[#D4AF37]" size={28} />
-                                <div>
-                                    <h4 className="font-bold text-sm uppercase">Результат з 1 візиту</h4>
-                                    <p className="text-stone-500 text-xs mt-1">Ідеальна гладкість та блиск</p>
-                                </div>
+                        <div className="grid lg:grid-cols-2 gap-16 items-start">
+                            <div>
+                                <h2 className="font-serif text-3xl md:text-4xl mb-8 uppercase tracking-tight">
+                                    Що таке <span className="text-[#D4AF37]">кератинування</span> волосся?
+                                </h2>
+                                <p className="text-stone-400 leading-relaxed mb-6">
+                                    Це процедура інтенсивного відновлення та випрямлення. Наше волосся на 80% складається з кератину, але через фарбування та стайлінг цей білок руйнується. 
+                                </p>
+                                <p className="text-stone-400 leading-relaxed">
+                                    Під час процедури я наповнюю порожнечі волосини рідким кератином, який під дією температури «запечатується», створюючи стійкий полімерний каркас. Результат — ідеально рівне волосся, яке не пушиться навіть у львівську мряку.
+                                </p>
                             </div>
-                            <div className="flex items-center gap-4 justify-center md:justify-start border-y md:border-y-0 md:border-x border-stone-800 py-8 md:py-0 md:px-8">
-                                <ShieldCheck className="text-[#D4AF37]" size={28} />
-                                <div>
-                                    <h4 className="font-bold text-sm uppercase">Досвід з 2018 року</h4>
-                                    <p className="text-stone-500 text-xs mt-1">Понад 6 років спеціалізації</p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="p-6 bg-stone-900/50 rounded-2xl border border-stone-800">
+                                    <FlaskConical className="text-[#D4AF37] mb-4" />
+                                    <h4 className="text-sm font-bold uppercase mb-2">Склад</h4>
+                                    <p className="text-[10px] text-stone-500 uppercase tracking-wider">Натуральні амінокислоти та гідролізований кератин</p>
                                 </div>
-                            </div>
-                            <div className="flex items-center gap-4 justify-center md:justify-start">
-                                <Clock className="text-[#D4AF37]" size={28} />
-                                <div>
-                                    <h4 className="font-bold text-sm uppercase">Ефект до 6 місяців</h4>
-                                    <p className="text-stone-500 text-xs mt-1">Накопичувальна властивість</p>
+                                <div className="p-6 bg-stone-900/50 rounded-2xl border border-stone-800">
+                                    <ShieldCheck className="text-[#D4AF37] mb-4" />
+                                    <h4 className="text-sm font-bold uppercase mb-2">Захист</h4>
+                                    <p className="text-[10px] text-stone-500 uppercase tracking-wider">Термозахисний екран від UV-променів</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 3. VALUE PROPOSITION */}
+                {/* 3. SAFETY BLOCK: ЧИ ЦЕ ШКІДЛИВО? (НОВИЙ БЛОК) */}
+                <section className="py-24 bg-stone-900/10">
+                    <div className="max-w-4xl mx-auto px-6 text-center">
+                        <AlertTriangle className="text-[#D4AF37] mx-auto mb-6" size={40} />
+                        <h2 className="font-serif text-3xl md:text-4xl mb-8 uppercase">Чи безпечна процедура?</h2>
+                        <p className="text-stone-300 text-lg mb-12 italic">
+                            «Головний міф: кератин псує волосся. Істина: волосся псує некомпетентний майстер та невірна температура.»
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-6 text-left">
+                            <div className="p-6 border border-stone-800 rounded-2xl">
+                                <h4 className="font-bold text-[#D4AF37] mb-2">Моя відповідальність:</h4>
+                                <ul className="text-sm text-stone-400 space-y-2">
+                                    <li>• Тест на ступінь пошкодження (0-5)</li>
+                                    <li>• Підбір складу без формальдегіду</li>
+                                    <li>• Професійна витяжна система в студії</li>
+                                </ul>
+                            </div>
+                            <div className="p-6 border border-stone-800 rounded-2xl">
+                                <h4 className="font-bold text-[#D4AF37] mb-2">Кератин на блонд?</h4>
+                                <p className="text-sm text-stone-400">
+                                    Можна, якщо волосся не "тягнеться". Для блондинок я використовую низькотемпературні режими та додаю протеїнові підкладки для зміцнення кортексу.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 4. EXPANDED COMPARISON (ПОКРАЩЕНО) */}
                 <section className="py-24 bg-stone-950">
-                    <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="space-y-8 text-left">
-                            <h2 className="font-serif text-3xl md:text-5xl tracking-tight uppercase">Свобода від <br /><span className="text-[#D4AF37]">щоденної праски</span></h2>
-                            <div className="h-1 w-20 bg-[#D4AF37]" />
-                            <p className="text-stone-300 leading-relaxed text-lg">
-                                Кератин створює захисний полімерний шар, який герметизує кутикулу. Волосся стає розсипчастим та гладким навіть у вологу погоду.
-                            </p>
-                            <div className="space-y-4">
-                                <div className="flex gap-4 p-6 bg-stone-900/30 rounded-2xl border border-stone-800">
-                                    <Clock className="text-[#D4AF37] shrink-0" />
-                                    <p className="text-stone-400 text-sm"><strong>Економія часу:</strong> Ви витрачаєте на 30 хвилин менше щоранку — достатньо просто висушити волосся феном.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bg-stone-900 rounded-[40px] p-10 border border-stone-800">
-                            <h3 className="text-[#D4AF37] font-serif text-2xl mb-8 flex items-center gap-3">
-                                <CheckCircle size={24} /> Кому підійде кератин?
-                            </h3>
-                            <ul className="space-y-6 text-stone-300">
-                                <li className="flex gap-4">
-                                    <span className="text-[#D4AF37] font-bold">01.</span>
-                                    <p className="text-sm"><strong>Тугий завиток:</strong> Найпотужніша процедура для випрямлення афро-кучерів.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="text-[#D4AF37] font-bold">02.</span>
-                                    <p className="text-sm"><strong>Пористе волосся:</strong> Прибирає пухнастість та "ялинку" по всій довжині.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="text-[#D4AF37] font-bold">03.</span>
-                                    <p className="text-sm"><strong>Жорстка структура:</strong> Пом'якшує волосся, роблячи його слухняним.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 4. SAFETY & TECHNOLOGY */}
-                <section className="py-24 bg-stone-900/20 border-y border-stone-900">
-                    <div className="max-w-6xl mx-auto px-6 text-center">
-                        <h2 className="font-serif text-3xl md:text-4xl mb-16 tracking-tight">Як ми захищаємо <span className="text-[#D4AF37]">ваше волосся?</span></h2>
-                        <div className="grid md:grid-cols-3 gap-8 text-left">
-                            <div className="p-8 bg-stone-950 rounded-3xl border border-stone-800">
-                                <Thermometer className="text-[#D4AF37] mb-6" size={32} />
-                                <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-4">Температурний контроль</h4>
-                                <p className="text-stone-400 text-sm">Підбираю градус праски індивідуально під кожен сантиметр довжини.</p>
-                            </div>
-                            <div className="p-8 bg-stone-950 rounded-3xl border border-stone-800">
-                                <ShieldCheck className="text-[#D4AF37] mb-6" size={32} />
-                                <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-4">Тест на еластичність</h4>
-                                <p className="text-stone-400 text-sm">Обов'язкова діагностика перед початком для безпеки результату.</p>
-                            </div>
-                            <div className="p-8 bg-stone-950 rounded-3xl border border-stone-800">
-                                <Wind className="text-[#D4AF37] mb-6" size={32} />
-                                <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-4">Витяжна система</h4>
-                                <p className="text-stone-400 text-sm">Робота проводиться у комфортних умовах без їдкого диму.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 5. QUICK COMPARISON */}
-                <section className="py-24 bg-stone-950">
-                    <div className="max-w-4xl mx-auto px-6">
-                        <h2 className="font-serif text-3xl md:text-5xl text-center mb-16 tracking-tight uppercase">Кератин чи Ботокс?</h2>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="p-8 bg-stone-900/30 rounded-3xl border border-[#D4AF37]/30 shadow-lg">
-                                <h4 className="text-[#D4AF37] font-bold uppercase text-xs tracking-widest mb-6 font-serif">Кератин:</h4>
-                                <p className="text-stone-300 text-sm leading-relaxed italic">Ваша ціль — 100% випрямлення. Волосся стає важчим, блискучим та ідеально рівним від коренів до кінчиків.</p>
-                            </div>
-                            <div className="p-8 bg-stone-900/10 rounded-3xl border border-stone-800 flex flex-col justify-between">
-                                <div>
-                                    <h4 className="text-stone-500 font-bold uppercase text-xs tracking-widest mb-6 font-serif">Ботокс:</h4>
-                                    <p className="text-stone-500 text-sm leading-relaxed italic mb-6">Ваша ціль — живлення. Волосся стає доглянутим, але природна хвиля та об'єм частково зберігаються.</p>
-                                </div>
-                                <Link to="/botoks-volossya-lviv" className="inline-flex items-center gap-2 text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest hover:underline">
-                                    Дізнатись про Ботокс <ArrowRight size={12} />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 6. PHOTO CTA */}
-                <section className="py-20 bg-stone-950">
-                    <div className="max-w-4xl mx-auto px-6">
-                        <div className="bg-gradient-to-br from-[#D4AF37] to-[#B8860B] p-10 rounded-[40px] text-stone-950 text-center relative overflow-hidden group shadow-2xl">
-                            <Camera size={80} className="absolute -top-4 -right-4 opacity-10 group-hover:scale-110 transition-transform" />
-                            <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tighter">Розрахунок вартості за фото</h3>
-                            <p className="mb-8 font-medium max-w-xl mx-auto">
-                                Надішліть фото вашого волосся зі спини в Direct. Я безкоштовно проконсультую та розрахую точну ціну для вашої густоти.
-                            </p>
-                            <a
-                                href="https://www.instagram.com/haircare_ua/"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center gap-2 px-10 py-5 bg-stone-950 text-white font-bold uppercase text-xs tracking-widest rounded-2xl hover:bg-white hover:text-black transition-all"
-                            >
-                                <Instagram size={20} /> Надіслати в Instagram
-                            </a>
+                    <div className="max-w-6xl mx-auto px-6">
+                        <h2 className="font-serif text-3xl md:text-5xl text-center mb-16 uppercase tracking-tight">Кератин vs Ботокс: <span className="text-[#D4AF37]">Різниця</span></h2>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse border border-stone-800">
+                                <thead className="bg-stone-900/50 text-[#D4AF37] uppercase text-[10px] tracking-widest">
+                                    <tr>
+                                        <th className="p-6 border border-stone-800">Характеристика</th>
+                                        <th className="p-6 border border-stone-800">Кератин</th>
+                                        <th className="p-6 border border-stone-800">Ботокс</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-sm text-stone-400">
+                                    <tr>
+                                        <td className="p-6 border border-stone-800 font-bold">Випрямлення</td>
+                                        <td className="p-6 border border-stone-800">100% (навіть жорсткий завиток)</td>
+                                        <td className="p-6 border border-stone-800">30-50% (лише прибирає пух)</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-6 border border-stone-800 font-bold">Ефект на об'єм</td>
+                                        <td className="p-6 border border-stone-800">Зменшує (за рахунок гладкості)</td>
+                                        <td className="p-6 border border-stone-800">Зберігає природний об'єм</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-6 border border-stone-800 font-bold">Тривалість</td>
+                                        <td className="p-6 border border-stone-800">4-6 місяців</td>
+                                        <td className="p-6 border border-stone-800">2-3 місяці</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </section>
 
                 <WorkAlgorithm />
 
-                {/* 7. PRICING */}
-                <section className="py-24 bg-stone-900/20 border-y border-stone-900">
-                    <div className="max-w-4xl mx-auto px-6 text-center">
-                        <h2 className="font-serif text-3xl md:text-5xl mb-12 uppercase tracking-tight">Вартість</h2>
-                        <div className="bg-stone-950 p-8 md:p-12 rounded-[40px] border border-stone-800 shadow-2xl">
-                            <div className="space-y-8 text-lg">
-                                <div className="flex justify-between items-center border-b border-stone-800 pb-6">
-                                    <span className="text-stone-300">Коротке волосся (до плечей)</span>
-                                    <span className="text-[#D4AF37] font-bold">від 1800 грн</span>
+                {/* 5. AFTERCARE: ДОГЛЯД (НОВИЙ БЛОК) */}
+                <section className="py-24 bg-stone-900/20">
+                    <div className="max-w-4xl mx-auto px-6">
+                        <div className="text-center mb-12">
+                            <HandHeart className="text-[#D4AF37] mx-auto mb-4" size={32} />
+                            <h2 className="font-serif text-3xl uppercase">Як зберегти результат?</h2>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {[
+                                { t: "Безсульфатні шампуні", d: "М'яке очищення не вимиває кератин з кутикули." },
+                                { t: "Сушіння феном", d: "Кератин — термоактивний. Гаряче повітря «активує» гладкість." },
+                                { t: "Ніяких солей", d: "Після моря або басейну обов'язково промивайте волосся прісною водою." }
+                            ].map((item, i) => (
+                                <div key={i} className="text-center">
+                                    <h4 className="font-bold text-[#D4AF37] text-xs uppercase mb-3">{item.t}</h4>
+                                    <p className="text-stone-500 text-xs leading-relaxed">{item.d}</p>
                                 </div>
-                                <div className="flex justify-between items-center border-b border-stone-800 pb-6">
-                                    <span className="text-stone-300">Середня довжина (до лопаток)</span>
-                                    <span className="text-[#D4AF37] font-bold">від 2200 грн</span>
-                                </div>
-                                <div className="flex justify-between items-center border-b border-stone-800 pb-6">
-                                    <span className="text-stone-300">Довге волосся (до пояса)</span>
-                                    <span className="text-[#D4AF37] font-bold">від 2800 грн</span>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
 
-                {/* 8. FAQ */}
+                {/* FAQ (Рендериться з масиву для консистентності) */}
                 <section className="py-24 bg-stone-950">
                     <div className="max-w-3xl mx-auto px-6">
-                        <h2 className="font-serif text-3xl text-center mb-16 uppercase tracking-[0.2em] text-[#D4AF37]">FAQ</h2>
+                        <h2 className="font-serif text-3xl text-center mb-16 uppercase tracking-[0.2em] text-[#D4AF37]">Питання та відповіді</h2>
                         <div className="space-y-6">
-                            {[
-                                { q: "Чи відпаде волосся, коли кератин вимиється?", a: "Ні. Це міф. Ламкість виникає лише при порушенні технології майстром. Попередня діагностика виключає цей ризик." },
-                                { q: "Чи можна робити кератин на блонд?", a: "Так, якщо ступінь пошкодження дозволяє. Я використовую спеціальні склади, що нейтралізують жовтизну." },
-                                { q: "Чи правда, що не можна мити голову 3 дні?", a: "Це застаріла технологія. Ми змиваємо склад відразу в студії — ви виходите з готовим результатом." },
-                                { q: "Чи буде волосся здаватися жирним?", a: "Тільки перші кілька днів через незвичну гладкість. Правильно підібраний безсульфатний шампунь вирішує цю проблему." }
-                            ].map((faq, i) => (
-                                <div key={i} className="group p-8 border border-stone-800 rounded-3xl bg-stone-900/10 hover:border-[#D4AF37]/30 transition-all">
+                            {faqData.map((faq, i) => (
+                                <div key={i} className="p-8 border border-stone-800 rounded-3xl bg-stone-900/10">
                                     <h4 className="flex items-center gap-3 text-white font-bold mb-4">
                                         <HelpCircle size={20} className="text-[#D4AF37]" /> {faq.q}
                                     </h4>
@@ -273,13 +234,6 @@ export default function KeratinPage() {
                             ))}
                         </div>
                     </div>
-                </section>
-
-                {/* 9. INTERNAL LINKING */}
-                <section className="py-20 border-t border-stone-900 bg-stone-950 text-center">
-                    <Link to="/" className="text-stone-500 hover:text-[#D4AF37] transition-colors underline underline-offset-8 decoration-stone-800 uppercase text-[10px] font-bold tracking-[0.3em]">
-                        Повернутись на головну: Вирівнювання та відновлення волосся у Львові
-                    </Link>
                 </section>
 
                 <Contact />
