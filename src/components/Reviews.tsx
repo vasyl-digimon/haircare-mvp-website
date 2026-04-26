@@ -40,8 +40,8 @@ export default function Reviews() {
                   src={rev.img} 
                   alt="Відгук клієнтки Haircare UA" 
                   loading="lazy" // Оптимізація швидкості
-                  width="400"    // Запобігання стрибкам верстки
-                  height="500"   // Запобігання стрибкам верстки
+                  width="360"    // Запобігання стрибкам верстки
+                  height="480"   // Запобігання стрибкам верстки
                   className="w-full h-auto rounded-xl grayscale-[30%] group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>

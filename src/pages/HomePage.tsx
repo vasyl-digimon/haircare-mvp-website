@@ -1,12 +1,18 @@
+import { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import TrustBar from '../components/TrustBar';
 import About from '../components/About';
 import Process from '../components/Process';
 import Services from '../components/Services';
-import Reviews from '../components/Reviews';
-import FAQ from '../components/FAQ';
-import Contact from '../components/Contact';
+
+// Відкладене завантаження важких компонентів
+const Reviews = lazy(() => import('../components/Reviews'));
+const FAQ = lazy(() => import('../components/FAQ'));
+const Contact = lazy(() => import('../components/Contact'));
+
+// Простий плейсхолдер під час завантаження
+const Loader = () => <div className="h-40 bg-stone-950" />;
 
 export default function HomePage() {
   return (
@@ -38,9 +44,13 @@ export default function HomePage() {
       <About />
       <Process />
       <Services />
-      <Reviews />
-      <FAQ />
-      <Contact />
+      
+      {/* Ці блоки завантажаться окремо, не блокуючи головний екран */}
+      <Suspense fallback={<Loader />}>
+        <Reviews />
+        <FAQ />
+        <Contact />
+      </Suspense>
     </>
   );
 }
