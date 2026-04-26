@@ -5,7 +5,9 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import KeratinPage from './pages/KeratinPage';
 import BotoxPage from './pages/BotoxPage';
+import NanoplastyPage from './pages/NanoplastyPage';
 import ScrollToTop from './components/ScrollToTop';
+
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/keratynove-vyrivnyuvannya-lviv" element={<KeratinPage />} />
               <Route path="/botoks-volossya-lviv" element={<BotoxPage />} />
+              <Route path="/nanoplastyka-volossya-lviv" element={<NanoplastyPage />} />
             </Routes>
           </main>
           <Footer />

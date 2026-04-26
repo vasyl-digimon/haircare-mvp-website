@@ -23,7 +23,7 @@ export default function Header() {
   const navLinks = [
     { name: 'Кератин', href: '/keratynove-vyrivnyuvannya-lviv' },
     { name: 'Ботокс', href: '/botoks-volossya-lviv' },
-    { name: 'Нанопластика', href: '#services' },
+    { name: 'Нанопластика', href: '/nanoplastyka-volossya-lviv' },
     { name: 'Контакти', href: '#contact' },
   ];
 
