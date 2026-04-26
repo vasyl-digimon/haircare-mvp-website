@@ -15,8 +15,24 @@ export default function HomePage() {
         <title>Кератин, ботокс та нанопластика волосся у Львові | Haircare UA</title>
         <meta name="description" content="Професійне кератинове вирівнювання, ботокс та нанопластика волосся у Львові. Індивідуальний підбір процедури та дзеркальний блиск." />
         <link rel="canonical" href="https://www.haircareua.com.ua/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BeautySalon",
+            "name": "Haircare UA Lviv",
+            "description": "Студія кератинового вирівнювання та відновлення волосся у Львові",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "вул. Костюшка, 18",
+              "addressLocality": "Львів",
+              "addressCountry": "UA"
+            },
+            "url": "https://www.haircareua.com.ua",
+            "priceRange": "₴₴"
+          })}
+        </script>
       </Helmet>
-      
+
       <Hero />
       <TrustBar />
       <About />

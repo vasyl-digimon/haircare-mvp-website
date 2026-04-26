@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="uk">
-
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYSKT1SQ1N"></script>
@@ -14,49 +13,16 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Preload основного шрифту або Hero зображення головної для швидкості LCP -->
+  <link rel="preload" as="image" href="/hero.jpg">
 
-  <title>Вирівнювання та відновлення волосся Львів | Студія Haircare UA</title>
-  <meta name="description"
-    content="Кератин, ботокс та нанопластика волосся у Львові. Професійна студія випрямлення та догляду. Результат за один візит. Записуйтесь у Direct!" />
-  <link rel="canonical" href="https://www.haircareua.com.ua/" />
-
-  <!-- Open Graph / Facebook / Instagram -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.haircareua.com.ua" />
-  <meta property="og:title" content="Кератинове вирівнювання волосся Львів | HAIRCARE UA" />
-  <meta property="og:description"
-    content="Ідеально рівне та здорове волосся у Львові. Понад 6 років досвіду. Записуйтесь через Instagram." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1599849594171-47e30c10ee63?q=80&w=1200" />
-  <meta property="og:locale" content="uk_UA" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="HAIRCARE UA — Кератинове вирівнювання Львів" />
-  <meta name="twitter:description" content="Відновлення та випрямлення волосся у Львові. Преміальні матеріали." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1599849594171-47e30c10ee63?q=80&w=1200" />
-
-  <!-- Structured Data (Schema.org) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      "name": "Haircare UA Lviv",
-      "description": "Студія кератинового вирівнювання та відновлення волосся у Львові",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "вул. Костюшка, 18",
-        "addressLocality": "Львів",
-        "addressCountry": "UA"
-      },
-      "url": "https://www.haircareua.com.ua",
-      "priceRange": "₴₴"
-    }
-  </script>
+  <!-- Тут ми залишаємо тільки базовий заголовок. 
+       Все інше (SEO, OG, Canonical) буде додавати Helmet динамічно для кожної сторінки -->
+  <title>Haircare UA — Студія вирівнювання волосся</title>
 </head>
-
 <body>
   <div id="root"></div>
-  <script type="module" src="./src/main.tsx"></script>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
-
 </html>
