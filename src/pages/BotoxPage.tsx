@@ -28,15 +28,11 @@ export default function BotoxPage() {
         {/* 1. HERO SECTION */}
         <section className="relative min-h-[65vh] flex items-center border-b border-stone-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img 
-              src="/botoks-volossya.avif" 
-              className="w-full h-full object-cover opacity-30 object-center" 
-              alt="Ботокс для волосся Львів результат" 
-            />
+            <img src="/botoks-volossya.avif" className="w-full h-full object-cover opacity-30 object-center" alt="Ботокс для волосся Львів" />
             <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/75 to-transparent" />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl text-left">
               <nav className="flex gap-2 text-stone-500 text-[10px] uppercase tracking-widest mb-8 font-bold">
                 <Link to="/" className="hover:text-[#D4AF37] transition-colors">Головна</Link>
                 <span>/</span>
@@ -46,10 +42,10 @@ export default function BotoxPage() {
                 Ботокс для волосся <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F9E498]">у Львові</span>
               </h1>
-              <p className="text-stone-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl italic">
+              <p className="text-stone-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
                 Живлення та відновлення структури без втрати об'єму. Приборкуємо пухнастість та повертаємо здоровий глянець за один візит.
               </p>
-              <a href="https://www.instagram.com/haircare_ua/" className="inline-flex items-center gap-3 px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase text-xs tracking-widest rounded-full hover:bg-white transition-all shadow-2xl">
+              <a href="https://www.instagram.com/haircare_ua/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase text-xs tracking-widest rounded-full hover:bg-white transition-all shadow-2xl">
                 Записатись на діагностику <ArrowRight size={16} />
               </a>
             </div>
@@ -59,7 +55,7 @@ export default function BotoxPage() {
         {/* 2. THE CHOICE: HOT VS COLD */}
         <section className="py-24 bg-stone-900/20 border-b border-stone-900">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="font-serif text-3xl md:text-4xl mb-16 text-center tracking-tight">Дві техніки — <span className="text-[#D4AF37]">різні цілі</span></h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-16 text-center tracking-tight uppercase">Дві техніки — <span className="text-[#D4AF37]">різні цілі</span></h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-stone-950 p-10 rounded-[40px] border border-stone-800 hover:border-blue-900/30 transition-all group">
                 <div className="flex justify-between items-start mb-6">
@@ -81,42 +77,33 @@ export default function BotoxPage() {
           </div>
         </section>
 
-        {/* 3. КРОК 3: ADAPTIVE COMPARISON (Ботокс чи Кератин?) */}
+        {/* 3. ADAPTIVE COMPARISON */}
         <section className="py-24 bg-stone-950">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="font-serif text-3xl md:text-5xl text-center mb-16 tracking-tight uppercase">Ботокс чи Кератин?</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {/* Botox Column */}
-              <div className="bg-stone-900/30 p-8 rounded-3xl border border-stone-800">
-                <h4 className="text-[#D4AF37] font-bold uppercase text-xs tracking-widest mb-6">Тобі потрібен Ботокс, якщо:</h4>
+              <div className="bg-stone-900/30 p-8 rounded-3xl border border-[#D4AF37]/30 shadow-lg">
+                <h4 className="text-[#D4AF37] font-bold uppercase text-xs tracking-widest mb-6 font-serif">Тобі потрібен Ботокс, якщо:</h4>
                 <ul className="space-y-4">
-                  {[
-                    "Хочеш зберегти природний об'єм",
-                    "Волосся пошкоджене, сухе або ламке",
-                    "Потрібно прибрати пухнастість, але залишити кучері",
-                    "Твоя мета — глибоке живлення та оздоровлення"
-                  ].map((text) => (
+                  {["Хочеш зберегти природний об'єм", "Волосся пошкоджене, сухе або ламке", "Потрібно прибрати пухнастість, але залишити кучері", "Твоя мета — живлення та оздоровлення"].map((text) => (
                     <li key={text} className="flex gap-3 text-stone-300 text-sm">
                       <CheckCircle className="text-[#D4AF37] shrink-0" size={18} /> {text}
                     </li>
                   ))}
                 </ul>
               </div>
-              {/* Keratin Column */}
-              <div className="bg-stone-950 p-8 rounded-3xl border border-stone-800">
-                <h4 className="text-stone-500 font-bold uppercase text-xs tracking-widest mb-6">Тобі потрібен Кератин, якщо:</h4>
-                <ul className="space-y-4 text-stone-500">
-                  {[
-                    "Мрієш про 100% ідеальну гладкість",
-                    "Втомилася від щоденної праски",
-                    "Хочеш максимально випрямити завиток",
-                    "Потрібен ефект до 6 місяців"
-                  ].map((text) => (
-                    <li key={text} className="flex gap-3 text-sm">
-                      <XCircle className="shrink-0" size={18} /> {text}
+              <div className="bg-stone-900/10 p-8 rounded-3xl border border-stone-800 group hover:border-stone-700 transition-colors">
+                <h4 className="text-stone-400 font-bold uppercase text-xs tracking-widest mb-6 font-serif text-center">Або Кератин, якщо:</h4>
+                <ul className="space-y-4 mb-8">
+                  {["Мрієш про 100% ідеальну гладкість", "Втомилася від щоденної праски", "Хочеш випрямити жорсткий завиток", "Потрібен ефект до 6 місяців"].map((text) => (
+                    <li key={text} className="flex gap-3 text-stone-500 text-sm">
+                      <XCircle className="shrink-0 text-stone-700 group-hover:text-[#D4AF37] transition-colors" size={18} /> {text}
                     </li>
                   ))}
                 </ul>
+                <Link to="/keratynove-vyrivnyuvannya-lviv" className="block text-center text-[#D4AF37] text-[10px] uppercase font-bold tracking-widest border border-[#D4AF37]/20 py-3 rounded-xl hover:bg-[#D4AF37] hover:text-black transition-all">
+                  Дивитись Кератин
+                </Link>
               </div>
             </div>
           </div>
@@ -149,12 +136,12 @@ export default function BotoxPage() {
           </div>
         </section>
 
-        {/* 5. КРОК 4: PHOTO CTA (Діагностика за фото) */}
+        {/* 5. PHOTO CTA */}
         <section className="py-20 bg-stone-950">
           <div className="max-w-4xl mx-auto px-6">
             <div className="bg-gradient-to-br from-[#D4AF37] to-[#B8860B] p-10 rounded-[40px] text-stone-950 text-center relative overflow-hidden group shadow-2xl shadow-gold-900/20">
               <Camera size={80} className="absolute -top-4 -right-4 opacity-10 group-hover:scale-110 transition-transform" />
-              <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4">Діагностика за фото</h3>
+              <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tighter">Діагностика за фото</h3>
               <p className="mb-8 font-medium max-w-xl mx-auto">
                 Не впевнені, яку процедуру обрати? Надішліть фото вашого волосся в Direct. Я безкоштовно проконсультую та розрахую точну вартість.
               </p>
@@ -176,9 +163,9 @@ export default function BotoxPage() {
             <h2 className="font-serif text-3xl text-center mb-16 uppercase tracking-[0.2em] text-[#D4AF37]">FAQ</h2>
             <div className="space-y-6">
               {[
-                { q: "Чи стане волосся жирним швидше?", a: "Ні. Склад наноситься з відступом 1-2 см. Я підберу правильний шампунь для очищення шкіри голови." },
+                { q: "Чи стане волосся жирним швидше?", a: "Ні. Склад наноситься з відступом 1-2 см від коренів. Я допоможу підібрати правильний шампунь для очищення шкіри голови." },
                 { q: "Чи можна робити ботокс на блонд?", a: "Це найкраща процедура для блондинок. Вона наповнює порожню структуру та зупиняє ламкість." },
-                { q: "Чи обов'язково сушити волосся феном?", a: "Так. Компоненти ботоксу термоактивні. Дзеркальний блиск з'являється тільки під дією тепла." }
+                { q: "Чи обов'язково сушити волосся феном?", a: "Так. Компоненти ботоксу термоактивні. Тільки під дією тепла проявляється дзеркальний блиск." }
               ].map((faq, i) => (
                 <div key={i} className="p-8 border border-stone-800 rounded-3xl bg-stone-900/10 hover:border-[#D4AF37]/30 transition-all">
                   <h4 className="flex items-center gap-3 text-white font-bold mb-4">
