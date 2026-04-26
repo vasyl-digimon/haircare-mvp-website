@@ -1,14 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Contact from '../components/Contact';
-import { 
-  ThermometerSnowflake, 
-  Flame, 
-  HelpCircle, 
-  CheckCircle, 
+import {
+  ThermometerSnowflake,
+  Flame,
+  HelpCircle,
+  CheckCircle,
   ArrowRight,
   Camera,
-  XCircle,
   Instagram
 } from 'lucide-react';
 
@@ -24,7 +23,7 @@ export default function BotoxPage() {
       </Helmet>
 
       <div className="pt-20 bg-stone-950 text-white selection:bg-[#D4AF37] selection:text-black font-sans">
-        
+
         {/* 1. HERO SECTION */}
         <section className="relative min-h-[65vh] flex items-center border-b border-stone-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -77,32 +76,43 @@ export default function BotoxPage() {
           </div>
         </section>
 
-        {/* 3. ADAPTIVE COMPARISON */}
+        {/* Замініть блок 3. ADAPTIVE COMPARISON у BotoxPage.tsx */}
         <section className="py-24 bg-stone-950">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="font-serif text-3xl md:text-5xl text-center mb-16 tracking-tight uppercase">Ботокс чи Кератин?</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-stone-900/30 p-8 rounded-3xl border border-[#D4AF37]/30 shadow-lg">
+              {/* Botox Column */}
+              <div className="bg-stone-900/30 p-8 rounded-3xl border border-[#D4AF37]/30 shadow-lg shadow-gold-900/5">
                 <h4 className="text-[#D4AF37] font-bold uppercase text-xs tracking-widest mb-6 font-serif">Тобі потрібен Ботокс, якщо:</h4>
                 <ul className="space-y-4">
                   {["Хочеш зберегти природний об'єм", "Волосся пошкоджене, сухе або ламке", "Потрібно прибрати пухнастість, але залишити кучері", "Твоя мета — живлення та оздоровлення"].map((text) => (
-                    <li key={text} className="flex gap-3 text-stone-300 text-sm">
+                    <li key={text} className="flex gap-3 text-stone-200 text-sm">
                       <CheckCircle className="text-[#D4AF37] shrink-0" size={18} /> {text}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-stone-900/10 p-8 rounded-3xl border border-stone-800 group hover:border-stone-700 transition-colors">
-                <h4 className="text-stone-400 font-bold uppercase text-xs tracking-widest mb-6 font-serif text-center">Або Кератин, якщо:</h4>
+
+              {/* Keratin Column - ТЕПЕР ПОСТІЙНО АКТИВНИЙ */}
+              <div className="bg-stone-900/40 p-8 rounded-3xl border border-stone-700 shadow-xl">
+                <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-6 font-serif text-center">Або Кератин, якщо:</h4>
                 <ul className="space-y-4 mb-8">
-                  {["Мрієш про 100% ідеальну гладкість", "Втомилася від щоденної праски", "Хочеш випрямити жорсткий завиток", "Потрібен ефект до 6 місяців"].map((text) => (
-                    <li key={text} className="flex gap-3 text-stone-500 text-sm">
-                      <XCircle className="shrink-0 text-stone-700 group-hover:text-[#D4AF37] transition-colors" size={18} /> {text}
+                  {[
+                    "Мрієш про 100% ідеальну гладкість",
+                    "Втомилася від щоденної праски",
+                    "Хочеш максимально випрямити завиток",
+                    "Потрібен ефект до 6 місяців"
+                  ].map((text) => (
+                    <li key={text} className="flex gap-3 text-stone-300 text-sm">
+                      <ArrowRight className="text-[#D4AF37] shrink-0" size={18} /> {text}
                     </li>
                   ))}
                 </ul>
-                <Link to="/keratynove-vyrivnyuvannya-lviv" className="block text-center text-[#D4AF37] text-[10px] uppercase font-bold tracking-widest border border-[#D4AF37]/20 py-3 rounded-xl hover:bg-[#D4AF37] hover:text-black transition-all">
-                  Дивитись Кератин
+                <Link
+                  to="/keratynove-vyrivnyuvannya-lviv"
+                  className="block text-center bg-[#D4AF37] text-black text-[10px] uppercase font-bold tracking-widest py-4 rounded-xl hover:bg-white transition-all shadow-lg"
+                >
+                  Дивитись сторінку Кератину
                 </Link>
               </div>
             </div>
@@ -145,9 +155,9 @@ export default function BotoxPage() {
               <p className="mb-8 font-medium max-w-xl mx-auto">
                 Не впевнені, яку процедуру обрати? Надішліть фото вашого волосся в Direct. Я безкоштовно проконсультую та розрахую точну вартість.
               </p>
-              <a 
-                href="https://www.instagram.com/haircare_ua/" 
-                target="_blank" 
+              <a
+                href="https://www.instagram.com/haircare_ua/"
+                target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-10 py-5 bg-stone-950 text-white font-bold uppercase text-xs tracking-widest rounded-2xl hover:bg-white hover:text-black transition-all"
               >
